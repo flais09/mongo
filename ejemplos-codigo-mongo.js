@@ -70,3 +70,19 @@ rs.initiate()
 # Comando para agregar un nodo al replica set
 rs.add({host:"127.0.0.1:27018", priority:1, votes:1})
 
+# Comando para conocer la configuración del replica set
+rs.config()
+
+# Comando para asignar a una variabla cfg la información del replica set
+cfg=rs.config()
+
+# Comando para cambiar la prioridad de los miembros del replica set de 3 miembros
+cfg.members[0].priority=0.5
+cfg.members[1].priority=2
+cfg.members[2].priority=3
+
+# Comando para reconfigurar el replica set
+rs.reconfig(cfg)
+
+
+
