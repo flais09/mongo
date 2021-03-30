@@ -51,7 +51,8 @@ db.marykay.insert(
      }  
   )
 
-
+# Comando para crear un nuevo servicio de mongo
+sc.exe create mongodb27018 binPath= "\"D:\Program Files\MongoDB\Server\4.4_2\bin\mongod.exe\" --service --config=\"D:\Program Files\MongoDB\Server\4.4_2\bin\mongod.cfg\"" DisplayName= "mongodb27018" start= " "
 
 
 
