@@ -61,3 +61,8 @@ sc.exe create mongodb27019 binPath= "\"D:\Program Files\MongoDB\Server\4.4_3\bin
 replication: 
   replSetName: replicaset43
 
+# Comando para ver el estatus del replica set 
+rs.status()
+
+# Comandi para inicializar el replica set
+rs.initiate()
