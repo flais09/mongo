@@ -59,5 +59,5 @@ sc.exe create mongodb27019 binPath= "\"D:\Program Files\MongoDB\Server\4.4_3\bin
 
 # Configuración para definir replica set. Agregar a mongod.cfg
 replication: 
-  retlSetName: replicaset43
+  replSetName: replicaset43
 
