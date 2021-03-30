@@ -64,5 +64,9 @@ replication:
 # Comando para ver el estatus del replica set 
 rs.status()
 
-# Comandi para inicializar el replica set
+# Comando para inicializar el replica set
 rs.initiate()
+
+# Comando para agregar un nodo al replica set
+rs.add({host:"127.0.0.1:27018", priority:1, votes:1})
+
