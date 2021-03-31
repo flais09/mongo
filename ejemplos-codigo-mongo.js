@@ -84,5 +84,7 @@ cfg.members[2].priority=3
 # Comando para reconfigurar el replica set
 rs.reconfig(cfg)
 
+# Comando para saber el tiempo que tardan en actualizarse los nodos secundarios
+rs.printSecondaryReplicationInfo()
 
 
