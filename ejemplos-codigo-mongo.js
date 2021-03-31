@@ -57,6 +57,10 @@ sc.exe create mongodb27018 binPath= "\"D:\Program Files\MongoDB\Server\4.4_2\bin
 # Comando para crear un tercer servicio de mongo
 sc.exe create mongodb27019 binPath= "\"D:\Program Files\MongoDB\Server\4.4_3\bin\mongod.exe\" --service --config=\"D:\Program Files\MongoDB\Server\4.4_3\bin\mongod.cfg\"" DisplayName= "mongodb27019" start= "auto"
 
+
+# Comando para abrir el shell de un nodo de un puerto específico
+mongo --port 27019 
+
 # Configuración para definir replica set. Agregar a mongod.cfg
 replication: 
   replSetName: replicaset43
