@@ -64,6 +64,9 @@ mongo --port 27019
 # Comando para importar
 mongoimport /dataset/products.json -d m103 -c products --port 26000 -u m103-admin -p m103-pass --authenticationDatabase admin
 
+# Comando para conectarse a mongos
+mongos --port 26000 -u m103-admin -p m103-pass --authenticationDatabase admin
+
 # Configuración para definir replica set. Agregar a mongod.cfg
 replication: 
   replSetName: replicaset43
