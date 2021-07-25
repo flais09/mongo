@@ -61,6 +61,9 @@ sc.exe create mongodb27019 binPath= "\"D:\Program Files\MongoDB\Server\4.4_3\bin
 # Comando para abrir el shell de un nodo de un puerto específico
 mongo --port 27019 
 
+# Comando para importar
+mongoimport /dataset/products.json -d m103 -c products --port 26000 -u m103-admin -p m103-pass --authenticationDatabase admin
+
 # Configuración para definir replica set. Agregar a mongod.cfg
 replication: 
   replSetName: replicaset43
