@@ -97,4 +97,15 @@ rs.reconfig(cfg)
 # Comando para saber el tiempo que tardan en actualizarse los nodos secundarios
 rs.printSecondaryReplicationInfo()
 
+# Comando para habilitar sharding (particionamiento) en una base de datos
+sh.enableSharding("m103")
+
+# Comando para crear un índice (necesario para hacerlo shard key) 
+db.products.createIndex( { "sku": 1 } )
+
+# Comando para particionar (sharding) la colección
+sh.shardCollection( "m103.products", { "sku": 1 } )
+
+# Comando para verficar el estatus del cluster particionado (sharded cluster)
+sh.status()
 
