@@ -64,6 +64,13 @@ mongo --port 27019
 # Comando para importar
 mongoimport /dataset/products.json -d m103 -c products --port 26000 -u m103-admin -p m103-pass --authenticationDatabase admin
 
+# Comandos idempotentes para importar porque borra antes de insertar
+mongoimport --drop -c people --username m201user --password m201pwd --uri "mongodb+srv://sophieclus.kxj1j.mongodb.net/m201" people.json 
+mongoimport --drop -c restaurants --username m201user --password m201pwd --uri "mongodb+srv://sophieclus.kxj1j.mongodb.net/m201" restaurants.json
+
+# Comando para conectarse al cluster en mongoAtlas
+mongo "mongodb+srv://sophieclus.kxj1j.mongodb.net/myFirstDatabase" --username m201user
+
 # Comando para conectarse a mongos
 mongos --port 26000 -u m103-admin -p m103-pass --authenticationDatabase admin
 
